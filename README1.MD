@@ -1,0 +1,1 @@
+i updated different details like abou us,contCT US,SERVICES ,CARRERS AND REGISTER PAGES IN MY PROJECT

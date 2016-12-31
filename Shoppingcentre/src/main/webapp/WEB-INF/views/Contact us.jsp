@@ -4,6 +4,7 @@
 <html>
 <head>
 
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -38,10 +39,29 @@
 
 </head>
 <body>
-PLEASE CONTACT TO ABOVE NUMBERS FOR ORDER
-<br><br>
-Ph:9666336441<br>
- 8328358433
 
+
+<div class="container"> 
+  
+  <h2>Contact Us</h2>
+  
+  <div class="row">
+    <div class="col-sm-6">
+  
+  <div class="well">Phone:<br>9666336441
+  <br>9985167075<br>8328348433
+  
+  </div>
+  <div class="well">Mail:<br>
+  Rajesh.ch1993@gmail.com
+  </div>
+  <div class="well">Fax:<br>08719-241110
+  
+  </div>
+   
+      </div>
+  </div>
+  
+  
 </body>
 </html>

@@ -15,6 +15,16 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.form_bg {
+background-color:#92FC42;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    
+}
+</style>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -39,38 +49,55 @@
 </head>
 <body>
 <center>
+
 <form>
+<h1 align="center">REGISTER HERE</h1><br>
+<div class="container">
+<div class="form_bg">
+<div class="row">
+  
+  <br>
 
+<table style="width:"35%">
+  <tr>
+    <td>FIRST NAME:</td>
+    <td><input type="text" name="text"><br><br></td>
 
+    
+  </tr>
+  <tr>
+  <td>LAST NAME:</td>
+    <td><input type="text" name="text"><br><br></td>
 
+  </tr>
 
- <div class="form-group">
-    <label for="FIRSTNAME">FIRST NAME:
-    <input type="text" class="form-control" id="name"></label>
-  </div>
-  <div class="form-group">
-    <label for="LASTNAME">LAST NAME:
-    <input type="text" class="form-control" id="name"></label>
-  </div>
-    <div class="form-group">
-    <label for="create pwd">CREATE PASSWORD:
-    <input type="password" class="form-control" id="create pwd"></label>
-  </div>
-    <div class="form-group">
-    <label for="confirm pwd">CONFIRM PASSWORD:
-    <input type="password" class="form-control" id="confirm pwd"></label>
-  </div>
-    <div class="form-group">
-    <label for="email">EMAIL ID:
-    <input type="email" class="form-control" id="email</label>">
+  <tr>
+  <td>CREATE PASSWORD:</td>
+    <td><input type="text" name="text"><br><br></td>
+
+  </tr>
+  <tr>
+  <td>CONFIRM PASSWORD:</td>
+    <td><input type="text" name="text"><br><br></td>
+    
+  </tr>
+  <tr>
+  <td>EMAIL ID:</td>
+    <td><input type="text" name="text"><br><br></td>
+  </tr>
+  <tr>
+  <td>    </td>
+    <td><input type="submit" value="submit"></td>
+  </tr>
+  </table>
   </div>
   
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-
- 
-</form></center>
+  
+  
+  
+  
+  </div></div>
+</form>
+</center>
 </body>
 </html>

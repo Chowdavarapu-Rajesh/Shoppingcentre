@@ -67,10 +67,10 @@
     </div>
     
     <div class="item">
-      <center>  <img src="resources/images/5.png" class="img-rounded"  alt="Chania" style="width:800px; height:400px"></center>
+      <center>  <img src="resources/images/5.jpg" class="img-rounded"  alt="Chania" style="width:800px; height:400px"></center>
     </div>
     <div class="item">
-      <center>  <img src="resources/images/6.png" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
+      <center>  <img src="resources/images/6.jpg" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
     </div>
     
     

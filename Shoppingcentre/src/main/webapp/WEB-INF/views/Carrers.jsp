@@ -42,9 +42,16 @@
 
 
 <body>
-
-we are having good patner ship facility and also very good employess
-
-
+<h2>GROW YOUR RELATIONSHIP WITH US LIKE A TREE
+</h2><BR><BR>
+<div class="row">
+  <div class="col-md-4">
+    
+      <a href="/w3images/lights.jpg">
+        <img src="resources/images/7.jpg" class="img-circle" alt="Lights" style="width:100%">
+        <div class="caption">
+    </a>
+    </div></div>    </div>
+      
 </body>
 </html>

@@ -65,21 +65,23 @@ center {color:blue;}
 <center>
 
 
-<form class="form-inline">
+    
+    
+    
 
-
+<div class="container-fluid">
 <h1 align="center">LOGIN HERE</h1>
 
 <hr>
 <br><br>
   <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+    <label for="email">Email address:
+    <input type="email" class="form-control" id="email"></label>
   </div>
   <div class="form-group">
-    <label for="pwd">Password:</label>
+    <label for="pwd">Password:
     <input type="password" class="form-control" id="pwd">
-  </div>
+  </label></div>
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>

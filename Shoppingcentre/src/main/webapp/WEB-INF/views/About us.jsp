@@ -43,19 +43,28 @@
 </head>
 
 <body>
+<br><br>
 
 <div class="container">
-  <h2>GROW YOUR RELATIONSHIP WITH US LIKE A TREE</h2>            
-  <img src="resources/images/7.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-</div>
-<br><br>
-<div class="jumbotron">
+  <div class="row">
+  
+  
+  <div class="jumbotron">
   <h2>SUNDER BOOKS AND GENERAL STORES</h2>     
   
   <br> <br> <br> 
   <p>SUNDER BOOKS AND GENERAL STORES established in 1970.From over a past 50 years we are having good relationship with all our customers.Our shop is located in City named MAHABUBABD which is out of its Railwaystation,we are proud of being a first shop in our City. </p>
 </div>
 
+  
+    <div class="col-sm-3">
+      <h3>Discounts</h3>
+      <p>We provide home delivery and discounts for all our customers who are registered with us....!!!</p>
+      <p>We provide 10% discount on all festivals and also for bulk purchases</p>
+    </div>
+    
+  </div>
+</div>
 
 
 </body>

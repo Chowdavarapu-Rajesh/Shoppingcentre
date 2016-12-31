@@ -38,5 +38,27 @@
 </head>
 <body>
 
+
+<div class="jumbotron text-center">
+  <h1>CUSTOMER IS GOD</h1>
+  <p>WE ARE FOR YOU AT ANY TIME!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Home Delivery</h3>
+      <p>Your order will be at your steps</p>
+      <p>Order now in SUNDER BOOKS  it will delivered before 60 mins</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Discounts</h3>
+      <p>We provide home delivery and discounts for all our customers who are registered with us....!!!</p>
+      <p>We provide 10% discount on all festivals and also for bulk purchases</p>
+    </div>
+    
+  </div>
+</div>
+
 </body>
 </html>
