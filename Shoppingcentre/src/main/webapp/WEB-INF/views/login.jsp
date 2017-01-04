@@ -6,10 +6,14 @@
 
 
 <style>
+div
+{color:white;}
 body {
-background-color:yellow;
+
+
+    background-image: url("resources/images/8.jpg");
+ background-size: 1400px 800px;
 }
-center {color:blue;}
 </style>
 
 
@@ -31,18 +35,17 @@ center {color:blue;}
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SUNDER BOOKS AND GENERAL STORES</a>
+      <a class="navbar-brand" href="#">TREND SETTER</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/Shoppingcentre">Home</a></li>
       <li><a href="About us">About us</a></li>
-      <li><a href="Carrers">Carrers</a></li>
     <li><a href="Services">Services</a></li>
     
-      <li><a href="Register">Register</a></li>
+      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
     
-      <li><a href="login">Login</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="Contact us">Contact us</a></li>
         <div class="input-group input-group-lg">
       <input type="text" class="form-control" placeholder="Search">
@@ -55,7 +58,6 @@ center {color:blue;}
   </div>
 </nav>
 
-
 </head>
 
 
@@ -65,7 +67,6 @@ center {color:blue;}
 <center>
 
 
-    
     
     
 
@@ -89,7 +90,6 @@ center {color:blue;}
 </form>
 
 </center>
-
 
 </body>
 

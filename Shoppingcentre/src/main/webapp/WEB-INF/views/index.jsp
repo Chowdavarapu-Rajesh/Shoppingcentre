@@ -17,18 +17,17 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SUNDER BOOKS AND GENERAL STORES</a>
+      <a class="navbar-brand" href="#">TREND SETTER</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/Shoppingcentre">Home</a></li>
       <li><a href="About us">About us</a></li>
-      <li><a href="Carrers">Carrers</a></li>
     <li><a href="Services">Services</a></li>
     
-      <li><a href="Register">Register</a></li>
+      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
     
-      <li><a href="login">Login</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="Contact us">Contact us</a></li>
       </ul>
   </div>
@@ -56,12 +55,9 @@
     </div>
 
     <div class="item">
-      <center>  <img src="resources/images/2.png" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
+      <center>  <img src="resources/images/2.jpg" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
     </div>
-    <div class="item">
-       <center> <img src="resources/images/3.jpg" class="img-circle" alt="Flower" style="width:800px; height:400px"></center>
-    </div>
-
+    
     <div class="item">
        <center> <img src=" resources/images/4.jpg" class="img-rounded" alt="Flower" style="width:800px; height:400px"></center>
     </div>
@@ -71,6 +67,9 @@
     </div>
     <div class="item">
       <center>  <img src="resources/images/6.jpg" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
+    </div>
+    <div class="item">
+      <center>  <img src="resources/images/7.jpg" class="img-thumbnail"  alt="Chania" style="width:800px; height:400px"></center>
     </div>
     
     
