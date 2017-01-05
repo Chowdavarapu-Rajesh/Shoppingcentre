@@ -31,7 +31,7 @@ public class ApplicationConfig {
 		driverManagerDataSource.setUsername("sa");
 		driverManagerDataSource.setPassword("sa");
 		driverManagerDataSource.setDriverClassName("org.h2.Driver");
-		driverManagerDataSource.setUrl("jdbc:h2:tcp://localhost/~/dataalert");
+		driverManagerDataSource.setUrl("jdbc:h2:tcp://localhost/~/datax");
 		return driverManagerDataSource;
 	}
 	private Properties getProperties()
