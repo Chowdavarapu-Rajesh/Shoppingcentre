@@ -1,5 +1,4 @@
-package com.backend.configuration;
-
+package com.dataalert.configuration;
 
 import java.util.Properties;
 
@@ -15,45 +14,48 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.backend.model.DataAlert;
-import com.backend.model.Product;
+import com.dataalert.model.Product;
+import com.dataalert.model.Users;
 
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com")
 public class ApplicationConfig {
+
 	
 	@Autowired
 	@Bean(name="datasource")
 	public DataSource getDataSource()
-	{
-		System.out.println("I am inside the datasource");
-		DriverManagerDataSource driverManagerDataSource=new DriverManagerDataSource();
-		driverManagerDataSource.setUsername("sa");
-		driverManagerDataSource.setPassword("sa");
-		driverManagerDataSource.setDriverClassName("org.h2.Driver");
-		driverManagerDataSource.setUrl("jdbc:h2:tcp://localhost/~/datax");
-		return driverManagerDataSource;
-	}
+	{System.out.println("i am inside data source");
+	DriverManagerDataSource d= new DriverManagerDataSource();
+	d.setUrl("jdbc:h2:tcp://localhost/~/datax");
+	d.setUsername("sa");
+	d.setPassword("sa");
+	d.setDriverClassName("org.h2.Driver");
+	return d;
+		}
 	private Properties getProperties()
 	{
 		Properties properties=new Properties();
 		properties.setProperty("hibernate.show_sql", "true");
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.hbm2ddl.auto", "create");
 		return properties;
 	}
+
 	@Autowired
 	@Bean(name="sessionFactory")
 	public SessionFactory getSessionFactory(DataSource dataSource)
 	{
 		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(dataSource);
 		 localSessionFactoryBuilder.addProperties(getProperties());
-		localSessionFactoryBuilder.addAnnotatedClasses(DataAlert.class);
+		localSessionFactoryBuilder.addAnnotatedClasses(Users.class);
 
 		localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
 		 return localSessionFactoryBuilder.buildSessionFactory();
-	}
+	}	
+
+
 	@Autowired
 	@Bean(name="transactionManager")
 	public HibernateTransactionManager geTransactionManager(SessionFactory sessionFactory)
@@ -63,4 +65,6 @@ public class ApplicationConfig {
 		
 	}
 
+	
 }
+
