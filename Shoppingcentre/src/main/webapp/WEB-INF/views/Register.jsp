@@ -86,12 +86,12 @@ body {
 
   <tr>
   <td>CREATE PASSWORD:</td>
-    <td><input type="text" name="text"><br><br></td>
+    <td><input type="password" name="text"><br><br></td>
 
   </tr>
   <tr>
   <td>CONFIRM PASSWORD:</td>
-    <td><input type="text" name="text"><br><br></td>
+    <td><input type="password" name="text"><br><br></td>
     
   </tr>
   <tr>
