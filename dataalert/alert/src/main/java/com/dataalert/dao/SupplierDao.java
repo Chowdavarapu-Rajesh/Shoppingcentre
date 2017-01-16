@@ -1,12 +1,16 @@
-package com.alert.dao;
+package com.dataalert.dao;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Repository;
 
-import com.dataalert.model.Users;
+import com.dataalert.model.Supplier;
 
 @ComponentScan("com")
 @Repository
-public interface UsersDao {
-	
-public void registerUser(com.dataalert.model.Users user);
+
+public interface SupplierDao {
+public void addSupplier(Supplier supplier);
+
+
+
 }

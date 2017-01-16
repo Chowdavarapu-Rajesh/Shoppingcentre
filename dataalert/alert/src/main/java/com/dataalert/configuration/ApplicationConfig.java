@@ -57,11 +57,11 @@ public DataSource getDataSource()
 	{
 		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(dataSource);
 		 localSessionFactoryBuilder.addProperties(getProperties());
-		//localSessionFactoryBuilder.addAnnotatedClasses(Users.class);
+		localSessionFactoryBuilder.addAnnotatedClasses(Users.class);
 
 		localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
-		//localSessionFactoryBuilder.addAnnotatedClasses(Supplier.class);
-		//localSessionFactoryBuilder.addAnnotatedClasses(Category.class); 
+		localSessionFactoryBuilder.addAnnotatedClasses(Supplier.class);
+		localSessionFactoryBuilder.addAnnotatedClasses(Category.class); 
 		return localSessionFactoryBuilder.buildSessionFactory();
 	}	
 	@Autowired

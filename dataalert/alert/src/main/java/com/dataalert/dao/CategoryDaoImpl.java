@@ -1,4 +1,4 @@
-package com.alert.dao;
+package com.dataalert.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

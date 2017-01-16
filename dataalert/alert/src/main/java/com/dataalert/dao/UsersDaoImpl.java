@@ -1,4 +1,4 @@
-package com.alert.dao;
+package com.dataalert.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,19 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dataalert.model.Supplier;
+import com.dataalert.model.Users;
 
-@Repository("SupplierDaoImpl")
+@Repository("userDaoImpl")
 @Transactional
-public class SupplierDaoImpl implements SupplierDao {
+public class UsersDaoImpl implements UsersDao {
 	@Autowired
 	private SessionFactory sessionFactory;
-
-	public void addSupplier(Supplier supplier) {
+	public void registerUser(Users user) {
 		Session session=sessionFactory.getCurrentSession();
-		session.save(supplier);
+		session.save(user);
+		System.out.println("user saved");
 		
 	}
-	
 
 }
