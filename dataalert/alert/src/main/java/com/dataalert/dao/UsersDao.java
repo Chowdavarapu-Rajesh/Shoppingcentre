@@ -8,5 +8,5 @@ import com.dataalert.model.Users;
 @Repository
 public interface UsersDao {
 	
-public void registerUser(com.dataalert.model.Users user);
+public boolean registerUser(com.dataalert.model.Users user);
 }

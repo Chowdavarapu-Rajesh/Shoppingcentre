@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.dataalert.model.UserRole;
 import com.dataalert.model.Users;
 
 @Repository("userDaoImpl")
@@ -13,10 +14,26 @@ import com.dataalert.model.Users;
 public class UsersDaoImpl implements UsersDao {
 	@Autowired
 	private SessionFactory sessionFactory;
-	public void registerUser(Users user) {
+	public boolean registerUser(Users user) {
+		boolean check=false;
+
 		Session session=sessionFactory.getCurrentSession();
-		session.save(user);
+		user.setEnabled(true);
+		Integer i=(Integer)session.save(user);
+
+		UserRole userrole=new UserRole();
+		userrole.setAuthority("ROLE_USER");
+
+		userrole.setAuthority("ROLE_ADMIN");
+		userrole.setUserId(user.getUserId());
+		session.save(userrole);
 		System.out.println("user saved");
+		if(i==1)
+			check=true;
+		else
+			check=false;	
+		return check;
+
 		
 	}
 

@@ -10,6 +10,13 @@ public class Users {
 	private int userId;
 	private String username;
 	private String password;
+	private boolean enabled;
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 	public int getUserId() {
 		return userId;
 	}

@@ -14,7 +14,7 @@ import com.dataalert.model.Product;
 @Transactional
 public class ProductDaoImpl implements ProductDao {
 	
-private static final Logger logger=LoggerFactory.getLogger("ProductDaoImpl.class");
+private static final Logger logger=LoggerFactory.getLogger(ProductDaoImpl.class);
 	@Autowired
 	private SessionFactory sessionFactory;
 	

@@ -15,7 +15,7 @@
 <title>Insert title here</title>
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">TREND SETTER</a>
     </div>
@@ -34,9 +34,7 @@
 </nav>
 </head>
 <body>
-
-
-
+<form>
 
 
 
@@ -90,6 +88,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+</form>
 
 </body>
 </html>

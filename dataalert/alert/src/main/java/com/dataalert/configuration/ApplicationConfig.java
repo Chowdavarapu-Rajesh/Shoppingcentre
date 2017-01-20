@@ -16,7 +16,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.dataalert.model.Category;
 import com.dataalert.model.Product;
+import com.dataalert.model.Register;
 import com.dataalert.model.Supplier;
+import com.dataalert.model.UserRole;
 import com.dataalert.model.Users;
 
 
@@ -32,7 +34,7 @@ public class ApplicationConfig{
 public DataSource getDataSource()
 	{System.out.println("i am inside of datasource");
 	DriverManagerDataSource d=new DriverManagerDataSource();
-	d.setUrl("jdbc:h2:tcp://localhost/~/datax");
+	d.setUrl("jdbc:h2:tcp://localhost/~/data");
 	d.setUsername("sa");
 	d.setPassword("sa");
 	d.setDriverClassName("org.h2.Driver");
@@ -53,15 +55,17 @@ public DataSource getDataSource()
 
 	@Autowired
 	@Bean(name="sessionFactory")
-	public SessionFactory getSessionFactory(DataSource dataSource)
+	public SessionFactory getSessionFactory(DataSource datasource)
 	{
-		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(dataSource);
+		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(datasource);
 		 localSessionFactoryBuilder.addProperties(getProperties());
 		localSessionFactoryBuilder.addAnnotatedClasses(Users.class);
-
+		localSessionFactoryBuilder.addAnnotatedClasses(UserRole.class);
 		localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
 		localSessionFactoryBuilder.addAnnotatedClasses(Supplier.class);
 		localSessionFactoryBuilder.addAnnotatedClasses(Category.class); 
+		localSessionFactoryBuilder.addAnnotatedClasses(Register.class);
+		
 		return localSessionFactoryBuilder.buildSessionFactory();
 	}	
 	@Autowired

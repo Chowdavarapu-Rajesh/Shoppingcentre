@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <style>
@@ -55,13 +56,13 @@ body {
       <li><a href="Contact us">Contact us</a></li>
       </ul>
   </div>
-</nav>
+</nav> 
 
 </head>
 <body>
 <center>
 
-<form>
+<form action="/Register">
 
 <br>
 <h1 align="center"><b>REGISTER HERE<b></h1><br>
@@ -73,29 +74,29 @@ body {
 
 <table style="width:"35%">
   <tr>
-    <td>FIRST NAME:</td>
+    <td>FIRSTNAME</td>
     <td><input type="text" name="text"><br><br></td>
 
     
   </tr>
   <tr>
-  <td>LAST NAME:</td>
+  <td>LASTNAME</td>
     <td><input type="text" name="text"><br><br></td>
 
   </tr>
 
   <tr>
-  <td>CREATE PASSWORD:</td>
+  <td>CREATEPASSWORD</td>
     <td><input type="password" name="text"><br><br></td>
 
   </tr>
   <tr>
-  <td>CONFIRM PASSWORD:</td>
+  <td>CONFIRMPASSWORD</td>
     <td><input type="password" name="text"><br><br></td>
     
   </tr>
   <tr>
-  <td>EMAIL ID:</td>
+  <td>EMAILID</td>
     <td><input type="text" name="text"><br><br></td>
   </tr>
   <tr>
