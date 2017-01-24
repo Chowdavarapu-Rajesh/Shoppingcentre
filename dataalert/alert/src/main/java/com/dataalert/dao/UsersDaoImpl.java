@@ -20,11 +20,21 @@ public class UsersDaoImpl implements UsersDao {
 		Session session=sessionFactory.getCurrentSession();
 		user.setEnabled(true);
 		Integer i=(Integer)session.save(user);
+		if(i!=0)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
 
-		UserRole userrole=new UserRole();
+	/*	UserRole userrole=new UserRole();
 		userrole.setAuthority("ROLE_USER");
 
-		userrole.setAuthority("ROLE_ADMIN");
+		
 		userrole.setUserId(user.getUserId());
 		session.save(userrole);
 		System.out.println("user saved");
@@ -33,7 +43,7 @@ public class UsersDaoImpl implements UsersDao {
 		else
 			check=false;	
 		return check;
-
+*/
 		
 	}
 

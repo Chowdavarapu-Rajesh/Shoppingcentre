@@ -43,6 +43,8 @@ body {
       <li class="active"><a href="/Shoppingcentre">Home</a></li>
       <li><a href="About us">About us</a></li>
     <li><a href="Services">Services</a></li>
+    <li><a href="Product">Product</a></li>
+    
     
       <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
@@ -71,10 +73,7 @@ body {
       
 <center>
 
-
-    
-    
-
+   
 <div class="container-fluid">
 <h1 align="center">LOGIN HERE</h1>
 

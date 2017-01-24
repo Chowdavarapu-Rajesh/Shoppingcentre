@@ -23,8 +23,9 @@
       <li class="active"><a href="/Shoppingcentre">Home</a></li>
       <li><a href="About us">About us</a></li>
     <li><a href="Services">Services</a></li>
+    <li><a href="Product">Product</a></li>
     
-      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a href="/Shoppingcentre/Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
     
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

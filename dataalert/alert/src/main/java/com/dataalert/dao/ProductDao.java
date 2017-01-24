@@ -9,4 +9,4 @@ import com.dataalert.model.Product;
 @ComponentScan("com")
 public interface ProductDao 
 {
-	public void addProduct(Product product); }
+	public boolean addProduct(Product product); }

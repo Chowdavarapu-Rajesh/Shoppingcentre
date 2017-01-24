@@ -12,6 +12,16 @@ public class Product {
 	private String pname;
 	
 	private float price;
+	private boolean enabled;
+	
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 
 	public int getProductId() {
 		return productId;

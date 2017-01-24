@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html>
 <head>
@@ -48,7 +50,8 @@ body {
       <li class="active"><a href="/Shoppingcentre">Home</a></li>
       <li><a href="About us">About us</a></li>
       <li><a href="Services">Services</a></li>
-    
+  <li><a href="Product">Product</a></li>
+      
     
       <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
@@ -62,7 +65,8 @@ body {
 <body>
 <center>
 
-<form action="/Register">
+<form:form commandName="user" action="registeruser" method="post">
+
 
 <br>
 <h1 align="center"><b>REGISTER HERE<b></h1><br>
@@ -73,33 +77,42 @@ body {
   <br>
 
 <table style="width:"35%">
-  <tr>
-    <td>FIRSTNAME</td>
-    <td><input type="text" name="text"><br><br></td>
-
-    
-  </tr>
-  <tr>
-  <td>LASTNAME</td>
-    <td><input type="text" name="text"><br><br></td>
+   <tr>
+  <td>USERNAME</td>
+    <td><form:input path="username"/><br><br></td>
 
   </tr>
 
   <tr>
   <td>CREATEPASSWORD</td>
-    <td><input type="password" name="text"><br><br></td>
+    <td><form:input path="createpassword"/><br><br></td>
 
   </tr>
   <tr>
   <td>CONFIRMPASSWORD</td>
-    <td><input type="password" name="text"><br><br></td>
+    <td><form:input path="confirmpassword"/><br><br></td>
     
   </tr>
   <tr>
   <td>EMAILID</td>
-    <td><input type="text" name="text"><br><br></td>
+    <td><form:input path="emailId"/><br><br></td>
   </tr>
+  
+  
+  
+  
+   <tr>
+    <td>Mobile no:</td>
+    <td><form:input path="Mobile"/><br><br></td>
+
+    
+  </tr>
+  
   <tr>
+  
+  
+  
+  
   <td>    </td>
     <td><input type="submit" value="submit"></td>
   </tr>
@@ -111,7 +124,7 @@ body {
   
   
   </div></div>
-</form>
+</form:form>
 </center>
 </body>
 </html>

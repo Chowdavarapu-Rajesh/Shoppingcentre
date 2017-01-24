@@ -1,4 +1,4 @@
-package com.dataalert.alert;
+ package com.dataalert.alert;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -25,7 +25,12 @@ AnnotationConfigApplicationContext annotationConfigApplicationContext=new Annota
 UsersDao userDao=(UsersDao)annotationConfigApplicationContext.getBean("userDaoImpl");
 Users user=new Users();
 user.setUsername("test");
-user.setPassword("test");
+user.setCreatepassword("test");
+user.setConfirmpassword("test");
+
+user.setEmailId("rajesh@re");
+user.setMobile(966633644);
+user.setEnabled(true);
 userDao.registerUser(user);
 
 
@@ -33,6 +38,8 @@ ProductDao p=(ProductDao)annotationConfigApplicationContext.getBean("productDaoI
 Product product=new Product();
 product.setPname("test");
 product.setPrice(900.0f);
+
+product.setEnabled(true);
 p.addProduct(product); 
 
 SupplierDao supplierdao =(SupplierDao)annotationConfigApplicationContext.getBean("SupplierDaoImpl");

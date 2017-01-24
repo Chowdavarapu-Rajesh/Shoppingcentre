@@ -60,12 +60,12 @@ public DataSource getDataSource()
 		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(datasource);
 		 localSessionFactoryBuilder.addProperties(getProperties());
 		localSessionFactoryBuilder.addAnnotatedClasses(Users.class);
-		localSessionFactoryBuilder.addAnnotatedClasses(UserRole.class);
+    	localSessionFactoryBuilder.addAnnotatedClasses(UserRole.class);
 		localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
-		localSessionFactoryBuilder.addAnnotatedClasses(Supplier.class);
-		localSessionFactoryBuilder.addAnnotatedClasses(Category.class); 
-		localSessionFactoryBuilder.addAnnotatedClasses(Register.class);
-		
+		//localSessionFactoryBuilder.addAnnotatedClasses(Supplier.class);
+		//localSessionFactoryBuilder.addAnnotatedClasses(Category.class); 
+		//localSessionFactoryBuilder.addAnnotatedClasses(Register.class);
+	
 		return localSessionFactoryBuilder.buildSessionFactory();
 	}	
 	@Autowired

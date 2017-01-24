@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.backend.model.DataAlert;
 import com.backend.model.Product;
 
+
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com")
@@ -40,7 +41,7 @@ public class ApplicationConfig {
 		Properties properties=new Properties();
 		properties.setProperty("hibernate.show_sql", "true");
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.hbm2ddl.auto", "create");
 		return properties;
 	}
 	@Autowired
@@ -50,8 +51,9 @@ public class ApplicationConfig {
 		 LocalSessionFactoryBuilder localSessionFactoryBuilder=new LocalSessionFactoryBuilder(dataSource);
 		 localSessionFactoryBuilder.addProperties(getProperties());
 		localSessionFactoryBuilder.addAnnotatedClasses(DataAlert.class);
-
-		localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
+		//localSessionFactoryBuilder.addAnnotatedClasses(UserRole.class);
+        
+		//localSessionFactoryBuilder.addAnnotatedClasses(Product.class);
 		 return localSessionFactoryBuilder.buildSessionFactory();
 	}
 	@Autowired

@@ -2,6 +2,8 @@ package com.sunder.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -14,7 +16,30 @@ import com.dataalert.model.Users;
 public class HomeController {
 	@Autowired
 	UsersDao usersDao;
-	RegisterDao registerdao;
+
+@RequestMapping("/registeruser")
+public String registerUser(@ModelAttribute("user") Users user)
+{
+System.out.println(user.getEmailId());
+boolean b=usersDao.registerUser(user);
+  System.out.println("value of b:"+b);
+if(b)
+{
+	return"login";
+	}
+else
+{
+	return"register";
+	}
+
+
+
+}
+	
+	
+	
+	
+
 @RequestMapping("/")
 public String home()
 {
@@ -22,7 +47,7 @@ System.out.println("i am from controller");
 return "index";
 }
 
-@RequestMapping("/test")
+/*@RequestMapping("/test")
 public String test(){
 	System.out.println("i am a tester");
 Users u= new Users();
@@ -30,7 +55,7 @@ u.setUsername("rajesh");
 u.setPassword("amma@123");
 usersDao.registerUser(u);
 return "login";
-}
+}*/
 @RequestMapping("/adminhome")
 public String adminHome()
 {System.out.println("i am from admin page");
@@ -48,6 +73,15 @@ public String login(){
 	System.out.println("Login With Controller");
 	return "login";
 }
+
+/*
+@RequestMapping("/product")
+public String product(){
+	System.out.println("product With Controller");
+	return "product";
+}
+*/
+
 
 @RequestMapping("/logout")
 public String logout()
@@ -79,20 +113,21 @@ public String Services()
 {System.out.println("services is");
 return "Services";
 	}
+	
 
 @RequestMapping("/Register")
-public String register(@RequestParam("FIRSTNAME") String firstName,@RequestParam("LASTNAME") String lastname,@RequestParam("CREATEPASSWORD") String createpassword,@RequestParam("CONFIRMPASSWORD") String confirmpassword,@RequestParam("EMAILID") String emailid)
+public String Register(Model model)
 {System.out.println("register is");
-Register r=new Register();r.setFirstName("chowdavarapu");
-r.setLastName("rajesh");
-r.setCreatePassword("amma@143");
-r.setConfirmPassword("amma@143");
-r.setEmailId("rajesh.ch1993@gmail.com");
-registerdao.addRegister(r);
-
-return "index";
+Users user=new Users();
+model.addAttribute("user",user);
+return "Register";
 	}
+/*
+@RequestMapping("/Register")
+public String Register(){
 
 
+return "Register";
+}*/
 }
 

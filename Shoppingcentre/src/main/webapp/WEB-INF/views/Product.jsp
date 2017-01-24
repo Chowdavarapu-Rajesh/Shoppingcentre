@@ -1,28 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <html>
 <head>
-
 <style>
+div
+{color:blue;}
+body {
 
-.row{
-width: 1150px;
-height: 150px;
-background-color:	#FF7F50;
+
+    background-color:green;
+ background-size: 1400px 800px;
+  background-repeat: no-repeat;
 }
 
-div{color:white;}
+.form_bg {
+    background-color: lightgrey;
+    width: 400px;
 
-.jumbotron{
-
-background-image: url("resources/images/10.jpg");
-
-width:1400px;
- 
+    border: 0px solid green;
+    padding:10px;
+    margin: 10px;
 }
-form{color:white;}
+
 </style>
+
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -35,9 +40,9 @@ form{color:white;}
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
+  
     <div class="navbar-header">
       <a class="navbar-brand" href="#">TREND SETTER</a>
     </div>
@@ -47,40 +52,59 @@ form{color:white;}
       <li><a href="Services">Services</a></li>
     <li><a href="Product">Product</a></li>
     
-      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
+      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="Contact us">Contact us</a></li>
       </ul>
   </div>
-</nav>
+</nav> 
 
 </head>
 <body>
+<center>
 
-<form>
-<div class="jumbotron text-center">
-  <h1>CUSTOMER IS GOD</h1>
-  <p>WE ARE FOR YOU AT ANY TIME!</p> 
-</div>
-  
-<br><br><br>
+<form:form commandName="product" action="items" method="post">
+
+
+<br>
+<h1 align="center"><b>PRODUCT DETAILS<b></h1><br>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h3>Home Delivery</h3>
-      <p>Your order will be at your steps</p>
-      <p>Order now in TREND SETTER before 7 days</p>
-    </div>
-    <div class="col-sm-6">
-      <h3>Discounts</h3>
-      <p>We provide home delivery and discounts for all our customers who are registered with us....!!!</p>
-      <p>We provide 10% discount on all festivals and also for bulk purchases</p>
-    </div>
-    
+<div class="form_bg">
+<div class="row">
+  
+  <br>
+
+<table style="width:"35%">
+   <tr>
+  <td>PRODUCTNAME:</td>
+    <td><form:input path="pname"/><br><br></td>
+
+  </tr>
+
+  <tr>
+  <td>PRICE</td>
+    <td><form:input path="price"/><br><br></td>
+
+  </tr>  
+  <tr>
+ 
+  
+  
+  
+  <td>    </td>
+    <td><input type="submit" value="submit"></td>
+  </tr>
+  </table>
   </div>
-</div>
-</form>
+  
+  
+  
+  
+  
+  </div></div>
+</form:form>
+</center>
 </body>
 </html>

@@ -18,13 +18,30 @@ private static final Logger logger=LoggerFactory.getLogger(ProductDaoImpl.class)
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public void addProduct(Product product) {
+	public boolean addProduct(Product product) {
 		
-		logger.info("-------------------started-----------------------------");
+		//logger.info("-------------------started-----------------------------");
 		Session session=sessionFactory.getCurrentSession();
-		session.save(product);
-		System.out.println("product saved");
-		logger.info("-----------------------ended--------------------------");
+		
+		product.setEnabled(true);
+		Integer ii=(Integer)session.save(product);
+		if(ii!=0)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
+
+		
+		
+		
+		
+		
+		//logger.info("-----------------------ended--------------------------");
 		
 	}
 
