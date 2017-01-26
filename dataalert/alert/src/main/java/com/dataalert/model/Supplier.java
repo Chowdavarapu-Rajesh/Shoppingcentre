@@ -10,6 +10,17 @@ public class Supplier {
 private int supplierId;
 private String supplierName;
 private String  supplierAddress;
+private boolean enabled;
+
+
+
+
+public boolean isEnabled() {
+	return enabled;
+}
+public void setEnabled(boolean enabled) {
+	this.enabled = enabled;
+}
 public int getSupplierId() {
 	return supplierId;
 }

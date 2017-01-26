@@ -9,6 +9,14 @@ public class Category {
 @Id@GeneratedValue
 private int categoryId;
 private String categoryName;
+private boolean enabled;
+
+public boolean isEnabled() {
+	return enabled;
+}
+public void setEnabled(boolean enabled) {
+	this.enabled = enabled;
+}
 public int getCategoryId() {
 	return categoryId;
 }

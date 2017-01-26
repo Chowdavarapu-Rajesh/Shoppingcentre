@@ -9,5 +9,5 @@ import com.dataalert.model.Product;
 
 public interface CategoryDao {
 	
-		public void addCategory(Category category); 
+		public boolean addCategory(Category category); 
 }

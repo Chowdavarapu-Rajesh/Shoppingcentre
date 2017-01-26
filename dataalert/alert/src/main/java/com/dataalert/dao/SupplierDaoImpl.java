@@ -14,11 +14,30 @@ public class SupplierDaoImpl implements SupplierDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void addSupplier(Supplier supplier) {
+	public boolean addSupplier(Supplier supplier) {
 		Session session=sessionFactory.getCurrentSession();
-		session.save(supplier);
+
+		supplier.setEnabled(true);
+		Integer ii=(Integer)session.save(supplier);
+		if(ii!=0)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
+
+		
+		
+		
+		
+		
+		//logger.info("-----------------------ended--------------------------");
 		
 	}
-	
 
 }
+

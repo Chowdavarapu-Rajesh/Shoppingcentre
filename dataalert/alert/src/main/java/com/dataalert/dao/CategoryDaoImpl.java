@@ -15,10 +15,30 @@ public class CategoryDaoImpl implements CategoryDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void addCategory(Category category) {
+	public boolean addCategory(Category category) {
 		Session session=sessionFactory.getCurrentSession();
-		session.save(category);
+
+		category.setEnabled(true);
+		Integer ii=(Integer)session.save(category);
+		if(ii!=0)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
+
+		
+		
+		
+		
+		
+		//logger.info("-----------------------ended--------------------------");
 		
 	}
 
 }
+

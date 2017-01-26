@@ -28,7 +28,7 @@
       <li><a href="/Shoppingcentre/Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
     
     
-      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="Contact us">Contact us</a></li>
       </ul>
   </div>

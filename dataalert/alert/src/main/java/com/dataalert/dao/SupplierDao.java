@@ -9,4 +9,4 @@ import com.dataalert.model.Supplier;
 @ComponentScan("com")
 public interface SupplierDao 
 {
-	public void addSupplier(Supplier supplier);}
+	public boolean addSupplier(Supplier supplier);}
